@@ -1,0 +1,40 @@
+body {
+  background-color: var(--homepage-bg-color);
+}
+
+/* Homepage */
+.homepage {
+  height: 70vh !important;
+}
+
+.homepage .h1-span {
+  font-weight: 300;
+}
+
+.homepage .heading-secondary {
+  position: relative;
+  left: 2px;
+}
+
+.homepage .card {
+  top: 50px;
+}
+
+/* Signup */
+.btn-primary {
+  color: #fff;
+  outline: none;
+  height: 43px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 8px 0 var(--content-overlay);
+}
+
+.signup-agreement-links {
+  color: var(--primary-color);
+}
+
+.signup-agreement-links:hover {
+  color: var(--primary-color-hover);
+}
