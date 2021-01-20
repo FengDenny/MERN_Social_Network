@@ -6,10 +6,13 @@
   --secondary-heading: "Montserrat", sans-serif;
   --primary-color: #4267b2;
   --primary-color-hover: #0a5bff;
+  --white-color: #fff;
   --secondary-color: #626262;
   --homepage-bg-color: rgba(246, 246, 246, 0.87);
   --border-radius: 10px;
   --content-overlay: rgba(0, 0, 0, 0.5);
+  --space: 1.5em 0;
+  --space: 2em 0;
 }
 
 /* CSS reset */
@@ -40,6 +43,10 @@
 
 .primary-background {
   background-color: var(--primary-color);
+}
+
+.white-color {
+  color: var(--white-color);
 }
 
 /* Container */
@@ -75,6 +82,9 @@
 .justify-center {
   justify-content: center;
 }
+.justify-start {
+  justify-content: flex-start;
+}
 
 .justify-end {
   justify-content: flex-end;
@@ -87,6 +97,9 @@
 /* Font */
 .xl {
   font-size: 72px;
+}
+.l {
+  font-size: 24px;
 }
 .md {
   font-size: 18px;
@@ -120,4 +133,18 @@
 
 .form-input:focus {
   border: 2px solid var(--primary-color);
+}
+
+/* Footer */
+/* put footer at the bottom */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-content {
+  flex: 1 0 auto;
+  padding: var(--space) var(--space) 0;
+  width: 100%;
 }
