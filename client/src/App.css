@@ -1,0 +1,123 @@
+/* Google font import */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@700&display=swap");
+
+:root {
+  --primary-heading: "Nunito", sans-serif;
+  --secondary-heading: "Montserrat", sans-serif;
+  --primary-color: #4267b2;
+  --primary-color-hover: #0a5bff;
+  --secondary-color: #626262;
+  --homepage-bg-color: rgba(246, 246, 246, 0.87);
+  --border-radius: 10px;
+  --content-overlay: rgba(0, 0, 0, 0.5);
+}
+
+/* CSS reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Font */
+.primary-heading {
+  font-family: var(--primary-heading);
+}
+
+.secondary-heading {
+  font-family: var(--secondary-heading);
+}
+
+/* color */
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.primary-background {
+  background-color: var(--primary-color);
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card */
+.card {
+  border: #fff;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  width: 460px;
+  height: 456px;
+  position: relative;
+  box-shadow: 0 8px 16px 0 var(--content-overlay);
+}
+
+/* Flex */
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Font */
+.xl {
+  font-size: 72px;
+}
+.md {
+  font-size: 18px;
+}
+
+.sm {
+  font-size: 13px;
+}
+
+/* margin */
+.margin-top {
+  margin-top: 20px;
+}
+
+/* Form */
+.form-group {
+  position: relative;
+  width: 388px;
+  top: 40px;
+}
+
+.form-input {
+  height: 43px;
+  outline: none;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 0 10px;
+  top: 5px;
+  position: relative;
+}
+
+.form-input:focus {
+  border: 2px solid var(--primary-color);
+}
