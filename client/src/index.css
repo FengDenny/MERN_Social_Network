@@ -2,6 +2,11 @@ body {
   background-color: var(--homepage-bg-color);
 }
 
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
 /* Homepage */
 .homepage {
   height: 70vh !important;
@@ -18,6 +23,7 @@ body {
 
 .homepage .card {
   top: 50px;
+  height: 500px !important;
 }
 
 /* Signup */
@@ -57,7 +63,43 @@ body {
   position: relative;
   top: 50px;
 }
+.fa-icon a {
+  padding: 0 5px;
+}
 .fa-icon-github {
   color: var(--white-color);
   cursor: pointer;
+}
+/* creating two hr line with or in middle  */
+.hr-line {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: 1px solid var(--content-overlay);
+  color: #333;
+  text-align: center;
+  margin-top: 0.2rem;
+}
+/* hr line with or in middle */
+.hr-line:after {
+  content: "OR";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 15px;
+  padding: 0 0.25em;
+  background: white;
+}
+
+/* link button */
+.link-btn a:link,
+.link-btn a:visited {
+  padding: 9px 170px;
+  text-align: center;
+  display: inline-block;
+}
+
+.link-btn a {
+  color: var(--white-color);
+  outline: none;
 }
