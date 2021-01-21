@@ -6,6 +6,7 @@
   --secondary-heading: "Montserrat", sans-serif;
   --primary-color: #4267b2;
   --primary-color-hover: #0a5bff;
+  --join-btn-color: #4caf50;
   --white-color: #fff;
   --secondary-color: #626262;
   --homepage-bg-color: rgba(246, 246, 246, 0.87);
@@ -45,6 +46,10 @@
   background-color: var(--primary-color);
 }
 
+.green-background {
+  background-color: var(--join-btn-color);
+}
+
 .white-color {
   color: var(--white-color);
 }
@@ -62,7 +67,7 @@
   background-color: #fff;
   border-radius: var(--border-radius);
   width: 460px;
-  height: 456px;
+  height: 500px;
   position: relative;
   box-shadow: 0 8px 16px 0 var(--content-overlay);
 }
@@ -118,7 +123,7 @@
 .form-group {
   position: relative;
   width: 388px;
-  top: 40px;
+  top: 10px;
 }
 
 .form-input {
@@ -147,4 +152,58 @@
   flex: 1 0 auto;
   padding: var(--space) var(--space) 0;
   width: 100%;
+}
+
+/* Modal */
+.site-modal {
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% 45%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+  height: 550px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+
+.site-modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  width: 23px;
+  padding: 4px;
+}
+
+.close {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
 }
