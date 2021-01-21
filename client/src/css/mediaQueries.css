@@ -1,0 +1,165 @@
+/* Homepage */
+@media only screen and (max-width: 992px) {
+  .homepage {
+    flex-direction: column !important;
+  }
+  .homepage .homepage-header {
+    position: relative;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-copyright {
+    right: 51px;
+  }
+  .fa-icon {
+    top: 61px;
+    right: 127px;
+  }
+
+  .fa-icon a {
+    padding: 0 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 497px) {
+  .card {
+    width: 404px;
+  }
+  .form-group {
+    width: 346px;
+  }
+  .link-btn a:link,
+  .link-btn a:visited {
+    padding: 9px 155px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .homepage .card {
+    top: 50px;
+    height: 480px !important;
+  }
+
+  .label-name {
+    font-size: 15px;
+  }
+
+  .form-input {
+    height: 31px;
+  }
+
+  .footer-copyright {
+    right: 10px;
+  }
+
+  .fa-icon {
+    top: 61px;
+    right: 87px;
+  }
+
+  .fa-icon a {
+    padding: 0 10px;
+  }
+
+  .homepage-header h1 {
+    font-size: 40px;
+  }
+  .homepage-header p {
+    font-size: 12px;
+  }
+
+  .card {
+    width: 346px;
+  }
+  .form-group {
+    width: 281px;
+    top: 0;
+  }
+  .from-group p {
+    font-size: 12px;
+  }
+
+  .link-btn a:link,
+  .link-btn a:visited {
+    padding: 9px 113px;
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer-content {
+    position: relative;
+    bottom: 27px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .homepage .homepage-header {
+    position: relative;
+    top: 50px;
+  }
+  .homepage .card {
+    top: 66px;
+    height: 452px !important;
+  }
+  .footer-copyright {
+    right: 10px;
+  }
+  .fa-icon {
+    top: 61px;
+    right: 96px;
+  }
+
+  .footer {
+    height: 95px;
+  }
+
+  .homepage {
+    height: 67vh !important;
+  }
+
+  .card {
+    width: 346px;
+    height: 470px !important;
+  }
+  .form-input {
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .homepage .homepage-header {
+    position: relative;
+    top: 40px;
+  }
+
+  .btn-primary {
+    height: 31px !important;
+  }
+  .xl {
+    font-size: 20px !important;
+  }
+  .md {
+    font-size: 12px !important;
+  }
+  .homepage .card {
+    top: 55px;
+    height: 393px !important;
+  }
+  .footer {
+    height: 80px;
+  }
+  .footer-content {
+    position: relative;
+    bottom: 35px;
+  }
+
+  .card {
+    width: 311px;
+    height: 470px !important;
+  }
+}
