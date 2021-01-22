@@ -39,6 +39,10 @@
   .link-btn a:visited {
     padding: 9px 155px;
   }
+
+  .modal-content {
+    width: 413px;
+  }
 }
 
 @media only screen and (max-width: 414px) {
@@ -88,7 +92,7 @@
 
   .link-btn a:link,
   .link-btn a:visited {
-    padding: 9px 113px;
+    padding: 9px 119px;
   }
   .footer {
     height: 100px;
@@ -97,7 +101,20 @@
     position: relative;
     bottom: 27px;
   }
+
+  .modal-content {
+    width: 380px;
+    height: 503px;
+    margin: 0% 50%;
+  }
 }
+
+@media only screen and (min-height: 812px) and (max-width: 375px) {
+  .modal-content {
+    margin: 15.4% 50%;
+  }
+}
+
 @media only screen and (max-width: 375px) {
   .homepage .homepage-header {
     position: relative;
@@ -130,6 +147,10 @@
   .form-input {
     height: 30px;
   }
+  .modal-content {
+    width: 346px;
+    height: 455px;
+  }
 }
 @media only screen and (max-width: 320px) {
   .homepage .homepage-header {
@@ -161,5 +182,14 @@
   .card {
     width: 311px;
     height: 470px !important;
+  }
+  .link-btn a:link,
+  .link-btn a:visited {
+    padding: 9px 128px;
+  }
+
+  .modal-content {
+    width: 311px;
+    height: 384px;
   }
 }
