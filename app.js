@@ -1,11 +1,11 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
-const cors = require("cors");
 const postRoute = require("./routes/post");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
 const cookieParser = require("cookie-parser");
+const AppError = require("./utility/AppError");
 const GlobalErrorHandler = require("./controllers/errorController");
 dotenv.config({ path: "./config/config.env" });
 const app = express();
@@ -24,7 +24,6 @@ if (process.env.NODE_ENV === "development") {
 
 // middleware
 app.use(cookieParser());
-app.use(cors());
 
 // Routes (v1)
 app.use("/api/v1/post", postRoute);
