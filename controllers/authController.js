@@ -18,7 +18,10 @@ exports.signup = CatchAsync(async (req, res, next) => {
 
   if (user) {
     return next(
-      new AppError(`${email} already exist with an account. Please login.`, 401)
+      new AppError(
+        `${email} is associated with an existing account. Please login.`,
+        401
+      )
     );
   }
   const token = jwt.sign(
@@ -40,8 +43,13 @@ exports.signup = CatchAsync(async (req, res, next) => {
             </tr>
             <tr>
                 <td style="padding: 20px 0 30px 0;">
-                    <p style="margin: 0; color:gray; width:700px; line-height:20px">${process.env.CLIENT_URL}/auth/activate/${token}</p>
+                    <a href="${process.env.CLIENT_URL}/auth/activate/${token}" style="margin: 0; color:gray; width:700px; line-height:20px">Activate your account</a>
                 </td>
+            </tr>
+            <tr>
+              <td style="padding: 20px 0 30px 0;">
+                <p style="margin: 0; color:gray; width:700px; line-height:20px"> If the link doesn't work, please copy and paste this url to activate: ${process.env.CLIENT_URL}/auth/activate/${token}</p>
+              </td>
             </tr>
         </table>
           `,
@@ -108,7 +116,7 @@ exports.signin = CatchAsync(async (req, res, next) => {
 
       // authenticate
       if (!user.authenticate(password)) {
-        return next(new AppError("Email and password do no match", 401));
+        return next(new AppError("Email and password do not match", 401));
       }
       // generate a token with user id and secret
 
