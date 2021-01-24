@@ -13,11 +13,7 @@ const UserSchema = new mongoose.Schema({
     trim: true,
     required: [true, "Please enter a email"],
     unique: true,
-  },
-  validated: {
-    type: Boolean,
-    default: false,
-    select: false,
+    lowercase: true,
   },
 
   hashed_password: {
