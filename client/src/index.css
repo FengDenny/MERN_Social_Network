@@ -103,3 +103,42 @@ a {
   color: var(--white-color);
   outline: none;
 }
+
+/* login */
+
+.form {
+  position: relative;
+  top: 50px;
+  padding: 10px;
+}
+
+.password-recovery {
+  position: absolute;
+  right: 0;
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+/* Account Activation */
+
+/* set position to middle of the page */
+.account-activate {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+}
+
+.account-activate .form-group {
+  width: 496px;
+}
+
+.account-activate .btn-primary {
+  width: 500px;
+}
+
+.account-activate .btn-primary:hover {
+  background-color: var(--success);
+}
