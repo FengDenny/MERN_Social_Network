@@ -1,20 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-library.add(faGithub);
+library.add(faGithub, faFacebook);
 
 function Footer() {
   return (
     <div className='footer'>
-      <div className='flex justify-evenly'>
+      <div className='flex justify-evenly footer-content'>
         <h1 className=' footer-copyright primary-heading white-color sm'>
           © 2021 MSNwork. | All rights reserved.
         </h1>
         <div className='fa-icon'>
           <a href='https://github.com/FengDenny'>
-            <FontAwesomeIcon className='fa-icon-github l' icon={faGithub} />{" "}
+            <FontAwesomeIcon className='fa-icon-github l' icon={faGithub} />
+          </a>
+          <a href='/'>
+            <FontAwesomeIcon className='fa-icon-github l' icon={faFacebook} />
           </a>
         </div>
       </div>
