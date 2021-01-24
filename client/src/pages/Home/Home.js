@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className='container'>
       <div className='homepage flex justify-evenly'>
-        <header>
+        <header className='homepage-header'>
           <h1 className='primary-color xl'>
             MSN<span className='h1-span'>work.</span>
           </h1>
@@ -13,8 +13,8 @@ function Home() {
             MERN stack social network application
           </p>
         </header>
-        <section className='card'>
-          <div className='flex justify-center'>
+        <section>
+          <div className='card flex justify-center'>
             <Signup />
           </div>
         </section>
