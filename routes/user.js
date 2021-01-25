@@ -7,7 +7,7 @@ const {
   deleteUser,
   hasAuthorization,
 } = require("./../controllers/userController");
-const { protected } = require("./../controllers/authController");
+const { protected, admin } = require("./../controllers/authController");
 
 const router = express.Router();
 
@@ -22,6 +22,15 @@ router.get("/get-user/:userId", protected, getUser);
 // @desc  update a single user
 //@route PUT "/api/v1/users/update-user/:userId"
 router.put("/update-user/:userId", protected, hasAuthorization, updateUser);
+// @desc  update a single admin user
+//@route PUT "/api/v1/users/update-admin/:userId"
+router.put(
+  "/update-admin/:userId",
+  protected,
+  admin,
+  hasAuthorization,
+  updateUser
+);
 
 // @desc  delete a single user
 //@route DELETE "/api/v1/users/dete-user/:userId"
