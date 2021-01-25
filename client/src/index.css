@@ -7,6 +7,30 @@ a {
   text-decoration: none;
 }
 
+/* Navbar */
+.nav-links {
+  position: relative;
+  bottom: 17px;
+}
+
+.span-link {
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: var(--white-color);
+}
+
+.nav-logo {
+  position: relative;
+  top: 10px;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
 /* Homepage */
 .homepage {
   height: 70vh !important;
