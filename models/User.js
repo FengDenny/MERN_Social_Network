@@ -21,6 +21,12 @@ const UserSchema = new mongoose.Schema({
     required: true,
     select: false,
   },
+  role: {
+    type: String,
+    enum: ["admin", "subscriber"],
+    default: "subscriber",
+  },
+
   salt: { type: String, select: false },
   created: {
     type: Date,
