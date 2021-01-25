@@ -16,6 +16,7 @@ function Signup(props) {
   });
   const { name, email, password } = values;
 
+  // higher order function: function that calls another function
   const handleChanges = (name) => (event) => {
     // grab different values based on their name located in  values
     // combining/including all elements from an object/array to setValues using spread values (...values)
@@ -31,7 +32,7 @@ function Signup(props) {
     await axios
       .post(url, data)
       .then((res) => {
-        console.log("SIGN UP SUCCESSFULLY", res);
+        console.log("SIGN UP SUCCESSFULLY", res.data);
         console.log(res.data.message);
         // clean up the state
         setValues({
@@ -41,7 +42,6 @@ function Signup(props) {
         });
 
         // show success alert
-
         if (res.data.status === "success") {
           showAlert("success", res.data.message);
         }
