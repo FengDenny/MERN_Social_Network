@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { showAlert } from "../../js/alerts";
-import Login from "../../pages/Login/Login";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+
 function AccountActivation({ match }) {
   const [values, setValues] = useState({
     name: "",
@@ -35,9 +35,8 @@ function AccountActivation({ match }) {
     await axios
       .post(url, data)
       .then((res) => {
-        console.log("ACCOUNT ACTIVATED", res);
+        console.log("ACCOUNT ACTIVATED", res.data);
         setValues({ ...values, show: false });
-
         if (res.data.status === "success") {
           showAlert("success", res.data.message);
           history.push("/");
@@ -66,4 +65,5 @@ function AccountActivation({ match }) {
     </div>
   );
 }
+
 export default AccountActivation;
