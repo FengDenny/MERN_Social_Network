@@ -118,16 +118,12 @@ exports.signin = CatchAsync(async (req, res, next) => {
       if (!user.authenticate(password)) {
         return next(new AppError("Email and password do not match", 401));
       }
-      // generate a token with user id and secret
-
-      const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
-
-      // persist the token as "t" in cookie with expired date
-
-      res.cookie("t", token, { expire: new Date() + 9999 });
-
+      // generate a token and send to client
+      const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
+        expiresIn: "7d",
+      });
       // return res with user and token to frontend client
-      const { _id, name, email } = user;
+      const { _id, name, email, role } = user;
       return res.json({
         status: "success",
         message: `Welcome back, ${name}`,
@@ -136,6 +132,7 @@ exports.signin = CatchAsync(async (req, res, next) => {
           _id,
           email,
           name,
+          role,
         },
       });
     });
@@ -155,4 +152,18 @@ exports.protected = jwtExpress({
   secret: process.env.JWT_SECRET,
   algorithms: ["HS256"],
   userProperty: "auth",
+});
+
+exports.admin = CatchAsync(async (req, res, next) => {
+  await User.findById({ _id: req.user._id }).exec((err, user) => {
+    if (err || !user) {
+      return next(new AppError("User does not exist", 400));
+    }
+
+    if (user.role !== "admin") {
+      return next(new AppError("Admin resources. Access denied.", 400));
+    }
+    req.profile = user;
+    next();
+  });
 });
