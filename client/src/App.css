@@ -56,6 +56,9 @@ li {
 .green-background {
   background-color: var(--join-btn-color);
 }
+.danger-background {
+  background-color: var(--error);
+}
 
 .white-color {
   color: var(--white-color);
@@ -79,6 +82,26 @@ li {
   box-shadow: 0 8px 16px 0 var(--content-overlay);
 }
 
+.user-card {
+  border: 1px solid var(--primary-color);
+  background-color: #fff;
+  width: 18rem;
+  height: auto;
+  position: relative;
+  box-shadow: 0 8px 16px 0 var(--content-overlay);
+}
+
+/* Positioning */
+.postion-relative-right {
+  position: relative;
+  right: 21px;
+}
+
+/* Display */
+.inline-block {
+  display: inline-block;
+}
+
 /* Flex */
 .flex {
   display: flex;
@@ -95,7 +118,7 @@ li {
   justify-content: center;
 }
 .justify-start {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .justify-end {
@@ -128,6 +151,12 @@ li {
 
 .margin-top-30 {
   margin-top: 30px;
+}
+
+/* Width */
+
+.width-md {
+  width: 174px;
 }
 
 /* Form */
