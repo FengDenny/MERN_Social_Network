@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Login from "../../pages/Login/Login";
 import openModal from "../../actions/openModal";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 import { showAlert } from "../../js/alerts";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 
 function Signup(props) {
@@ -15,6 +14,9 @@ function Signup(props) {
     password: "123456aA!",
   });
   const { name, email, password } = values;
+
+  // open modal
+  const dispatch = useDispatch();
 
   // higher order function: function that calls another function
   const handleChanges = (name) => (event) => {
@@ -129,7 +131,7 @@ function Signup(props) {
           <Link
             to=''
             onClick={() => {
-              props.openModal("open", <Login />);
+              dispatch(openModal("open", <Login />));
             }}
           >
             Login
@@ -140,13 +142,4 @@ function Signup(props) {
   );
 }
 
-function mapDispatchToProps(dispatcher) {
-  return bindActionCreators(
-    {
-      openModal: openModal,
-    },
-    dispatcher
-  );
-}
-
-export default connect(null, mapDispatchToProps)(Signup);
+export default Signup;
