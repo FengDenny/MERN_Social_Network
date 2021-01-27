@@ -6,7 +6,8 @@ import AuthHome from "./pages/AuthHome/AuthHome";
 import UserHome from "./pages/UserHome/UsersHome";
 import Activate from "./pages/Signup/AccountActivation";
 import AuthRoute from "./pages/AuthHome/AuthRoute";
-import Profile from "./pages/Profile/Profile";
+import ProfileSetting from "./pages/Profile/ProfileSetting";
+import UserProfile from "./pages/Profile/UserProfile";
 import Navbar from "./utility/Navbar/Navbar";
 import Footer from "./utility/Footer/Footer";
 import Modal from "./utility/Modal/Modal";
@@ -25,8 +26,9 @@ function App() {
             <AuthRoute
               exact
               path='/user/profile-setting/:id'
-              component={Profile}
+              component={ProfileSetting}
             />
+            <AuthRoute exact path='/user/:userId' component={UserProfile} />
           </Switch>
         </div>
         <Route path='/' component={Modal} />
