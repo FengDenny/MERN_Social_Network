@@ -9,12 +9,13 @@ function Login({ history }) {
   const [values, setValues] = useState({
     email: "dfeng415@yahoo.com",
     password: "123456aA!",
-    redirectToReferer: false,
   });
 
   // close modal
   const reload = () => {
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 5);
   };
 
   const { email, password } = values;
@@ -40,15 +41,11 @@ function Login({ history }) {
             email: "",
             password: "",
           });
-          // if (res.data.status === "success") {
-          //   reload();
-          // }
-          isAuth() && isAuth().role === "admin"
-            ? history.push("/admin")
-            : history.push("/subscriber");
+          if (res.data.status === "success") {
+            reload();
+          }
         });
       })
-
       .catch((err) => {
         console.log("LOG IN ERROR", err);
         showLoginAlert("error", err.response.data.message);
@@ -105,16 +102,10 @@ function Login({ history }) {
       </form>
     );
   };
-
   return (
     <div>
       {/* check if user is signed in  */}
-      {isAuth() && isAuth().role === "admin" ? (
-        <Redirect to='/admin' />
-      ) : isAuth() && isAuth().role === "subscriber" ? (
-        <Redirect to='/subscriber' />
-      ) : null}
-
+      {isAuth() ? <Redirect to={`/user`} /> : null}
       {LoginForm()}
     </div>
   );
