@@ -23,6 +23,7 @@ function UsersHome() {
     <div className='container'>
       <h1>Users</h1>
       <div>
+        {/* to remove error of map undefined must include users && users.map */}
         {users &&
           users.map((user, i) => (
             <div key={i} className='user-card'>
