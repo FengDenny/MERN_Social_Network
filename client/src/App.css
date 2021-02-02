@@ -83,18 +83,31 @@ li {
 }
 
 .user-card {
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   background-color: #fff;
   width: 18rem;
-  height: auto;
   position: relative;
   box-shadow: 0 8px 16px 0 var(--content-overlay);
+  border-radius: 5px;
+}
+
+/* Wrapper */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px;
+  width: 80% !important;
 }
 
 /* Positioning */
 .postion-relative-right {
   position: relative;
   right: 21px;
+}
+
+.postion-relative-left {
+  position: relative;
+  left: 142px;
 }
 
 /* Display */
@@ -149,16 +162,31 @@ li {
   margin-top: 20px;
 }
 
+.margin-top-sm {
+  margin-top: 5px;
+}
+
 .margin-top-30 {
   margin-top: 30px;
 }
 
 /* Width */
 
+.width-sm {
+  width: 100px;
+}
 .width-md {
   width: 174px;
 }
 
+/* Padding */
+.padding-left {
+  padding: 0px 20px;
+}
+
+.padding-top {
+  padding: 20px 0;
+}
 /* Form */
 .form-group {
   position: relative;
