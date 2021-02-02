@@ -250,3 +250,16 @@ a {
   left: 45%;
   top: 14%;
 }
+
+/* Confirm */
+
+.white-background {
+  background-color: var(--white-color);
+}
+
+.confirmation {
+  width: 400px;
+  height: 150px;
+  position: absolute;
+  top: 19px;
+}
