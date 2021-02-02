@@ -335,3 +335,45 @@ li {
 .alert--error {
   background-color: var(--error);
 }
+
+/* Cookie Consent */
+#consent-popup {
+  position: fixed;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  padding: 2rem 8rem;
+  background-color: var(--primary-color);
+  transition: opacity 1s ease;
+  font-size: 18px;
+}
+.hidden {
+  opacity: 0;
+}
+
+.consent-p {
+  position: relative;
+  bottom: 1px;
+  display: flex;
+  justify-content: center;
+  color: var(--white-color);
+}
+
+.consent-btn {
+  position: relative;
+  bottom: 10px;
+  left: 18px;
+  border: 2px solid var(--join-btn-color);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-alert);
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  background-color: var(---primary-color);
+  color: var(--white-color);
+  outline: none;
+  font-size: 17px;
+}
+.consent-btn:hover {
+  background-color: var(--success);
+}
