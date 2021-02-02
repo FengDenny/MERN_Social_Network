@@ -201,4 +201,52 @@ a {
   background-color: var(--success);
 }
 
-/* Profile */
+/* UsersHome */
+.user-card h1,
+.user-card p,
+.user-card img {
+  padding: 0 10px;
+  position: relative;
+}
+.user-card img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.user-card h1 {
+  position: absolute;
+  top: 2px;
+  left: 90px;
+}
+
+.user-card p {
+  position: absolute;
+  top: 35px;
+  left: 90px;
+}
+.user-card-profile-link {
+  text-decoration: underline !important;
+}
+
+.user-card-profile-link:hover {
+  color: var(--primary-color-hover);
+}
+
+/* userProfile */
+
+.user-profile-img {
+  align-items: flex-start !important;
+}
+
+.user-profile-img img {
+  width: 200px;
+  height: auto;
+}
+
+.user-profile-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 45%;
+  top: 14%;
+}
