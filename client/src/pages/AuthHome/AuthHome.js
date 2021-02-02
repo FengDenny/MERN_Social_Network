@@ -1,5 +1,6 @@
 import React from "react";
 import Signup from "../Signup/Signup";
+import { showCookieConsent } from "./CookieConsent";
 
 function AuthHome() {
   return (
@@ -17,6 +18,7 @@ function AuthHome() {
           <div className='card flex justify-center'>
             <Signup />
           </div>
+          {showCookieConsent()}
         </section>
       </div>
     </div>
