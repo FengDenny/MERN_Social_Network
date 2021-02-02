@@ -48,9 +48,12 @@ li {
 .secondary-color {
   color: var(--secondary-color);
 }
+.danger-color {
+  color: var(--error);
+}
 
 .primary-background {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 
 .green-background {
@@ -110,12 +113,22 @@ li {
   left: 142px;
 }
 
+.position-relative-top {
+  position: relative;
+  top: 10px;
+}
+
 /* Display */
 .inline-block {
   display: inline-block;
 }
 
 /* Flex */
+
+.display-flex {
+  display: flex;
+}
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -170,8 +183,14 @@ li {
   margin-top: 30px;
 }
 
-/* Width */
+.margin-right {
+  margin-right: 15px;
+}
 
+/* Width */
+.width-xsm {
+  width: 80px;
+}
 .width-sm {
   width: 100px;
 }
@@ -187,6 +206,12 @@ li {
 .padding-top {
   padding: 20px 0;
 }
+
+/* border */
+.border-radius {
+  border-radius: 8px;
+}
+
 /* Form */
 .form-group {
   position: relative;
