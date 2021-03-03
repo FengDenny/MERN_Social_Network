@@ -1,59 +1,34 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import React, { Fragment } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import openModal from "../../actions/openModal";
 
-class Modal extends Component {
-  state = {};
-  closeModal = () => {
-    this.props.openModal("closed", "");
+function Modal() {
+  const dispatch = useDispatch();
+  const modalOpen = useSelector((state) => state.siteModal.openClose);
+  const modalContent = useSelector((state) => state.siteModal.content);
+
+  const closeModal = (e) => {
+    if (e.target.id === "modal" || e.target.id === "closeModal")
+      dispatch(openModal("closed", ""));
+    // document.querySelector("body").classList.add("out");
   };
 
-  onOverlayClose(e) {
-    if (e.target.id === "modal") this.closeModal();
-  }
-
-  render() {
-    let modalInLineStyle;
-    if (this.props.siteModal.openClose === "open") {
-      modalInLineStyle = { display: "block" };
-    } else {
-      modalInLineStyle = { display: "none" };
-    }
-
-    return (
-      <div
-        id='modal'
-        onClick={(e) => this.onOverlayClose(e)}
-        className='site-modal'
-        style={modalInLineStyle}
-      >
-        <div className='modal-content'>
-          <div>
-            <span onClick={this.closeModal} className='close'>
-              &times;
-            </span>
+  return (
+    <Fragment>
+      {modalOpen === "open" && (
+        <div id='modal' onClick={closeModal} className='site-modal'>
+          <div id='modal-content' className='modal-content'>
+            <div>
+              <span id='closeModal' onClick={closeModal} className='close'>
+                &times;
+              </span>
+            </div>
+            <div>{modalContent}</div>
           </div>
-          <div>{this.props.siteModal.content}</div>
         </div>
-      </div>
-    );
-  }
-}
-
-function mapStateToProps(state) {
-  return {
-    siteModal: state.siteModal,
-  };
-}
-
-function mapDispatchToProps(dispatcher) {
-  return bindActionCreators(
-    {
-      openModal: openModal,
-    },
-    dispatcher
+      )}
+    </Fragment>
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default Modal;
